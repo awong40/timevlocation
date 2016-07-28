@@ -1,0 +1,19 @@
+#written in python 2.7
+
+#given a end location N I want to get to, what is the least amount of time it will take me
+#certain steps are only revealed at specified times
+#longest distance I can travel at a time is distance D
+
+#function to find minumum time
+def solution(A, D):
+    
+#funtion for determining steps available
+    def stones(A):
+        for k in range(len(A)):
+            if k + D >= N:
+                return A[k]
+            return "Not found"
+
+    print min(stones(A))
+
+    pass
